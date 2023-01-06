@@ -4,9 +4,15 @@
 int main(void)
 {
 	int a, b;
+	int ans1, ans2, ans3, ans4;
+
 	scanf("%d%d", &a, &b);
-	long double ans = (long double)a / (long double)b;
-	printf("%lf", ans);
+	ans1 = a * (b % 10);
+	ans2 = a * ((b % 100) / 10);
+	ans3 = a * (b / 100);
+	ans4 = a * b;
+	
+	printf("%d\n%d\n%d\n%d", ans1, ans2, ans3, ans4);
 
 	return 0;
 }
